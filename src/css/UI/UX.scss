@@ -1,0 +1,95 @@
+* {
+  font-family: 'HK Grotesk';
+  font-weight: 400;
+  font-size: 1em;
+  color: #ddd;
+  transition: 0.2s ease-in;
+}
+
+html, body {
+  // background-color: rgba($color: #000000, $alpha: 0.4);
+  background: none;
+}
+
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  background-color: rgba($color: #000000, $alpha: 0.3)
+}
+
+.player {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+}
+
+#trackData .trackTitle span{
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+#trackData .trackArtist span{
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+#volumeBar {
+  -webkit-appearance: none;
+  width: calc(100% - 64px);
+  float: left;
+  margin: 6px 0;
+  transition: 0.2s ease-in;
+  background-color: rgba(0, 0, 0, 0);
+  &::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0.5px #000000, 0px 0px 0px #0d0d0d;
+    background: #201f1e;
+    border-radius: 25px;
+    border: 0px solid #000000;
+  }
+  &:focus{
+    outline: none;
+  }
+  &::-webkit-slider-thumb{
+    border: 3.2px solid #ccc;
+    height: 14px;
+    width: 14px;
+    border-radius: 50px;
+    background: #ccc;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5.5px;
+    &:active{
+      background: #777;
+    }
+  }
+
+}
+
+.playerController div i:active, .playerController div svg path:active {
+  color: #777 !important;
+  transform: scale(0.9);
+}
+
+.sideBar{
+  background-color: rgba($color: #000000, $alpha: 0.3)
+}
+
+.sideBarComponent span, .sideBarSectionBreak span{
+  vertical-align: middle;
+  padding: 0.75em 2em;
+  box-sizing: border-box;
+}
+
+.sideBarSectionBreak span {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 75%;
+}
+
+.sideBarComponent.active{
+  border-left: 4px solid green;
+  & span{
+    color: #777;
+  }
+}

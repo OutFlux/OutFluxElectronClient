@@ -1,0 +1,17 @@
+// Layout
+@import "layout/grid";
+
+// UI
+@import "UI/UX";
+
+// Fonts
+@import "UI/fonts/fonts";
+
+// Font Awesome
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/WebFonts" !default;
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
+
