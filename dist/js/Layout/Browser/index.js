@@ -31,7 +31,7 @@ var _Songs2 = _interopRequireDefault(_Songs);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Browser
-class Browser extends _react2.default.Component {
+class Browser extends _react2.default.PureComponent {
   constructor(props) {
     super(props);
   }

@@ -117,7 +117,7 @@ div#root {
 .sideBar, .browser {
   display: block;
   float: left;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .browser {
   height: 100%;
@@ -161,5 +161,44 @@ div#root {
 
 .player {
   position: relative; }
+
+.albumCard {
+  height: 15rem;
+  width: 12rem;
+  float: left; }
+  .albumCard .imgHolder {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.25rem; }
+    .albumCard .imgHolder img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.25em; }
+  .albumCard .cardMeta {
+    box-sizing: border-box;
+    padding: 0 1rem; }
+    .albumCard .cardMeta span {
+      width: 100%;
+      display: inline-block; }
+    .albumCard .cardMeta .albumName {
+      width: 100%;
+      font-weight: 800;
+      font-size: 1.15em; }
+    .albumCard .cardMeta .albumArtist {
+      width: 100%;
+      font-weight: 300;
+      font-size: 0.85em; }
+
+.horizontalList {
+  width: 100%;
+  height: 16rem;
+  box-sizing: border-box;
+  padding: 1rem 2rem; }
+
+.slideShow {
+  height: 300px;
+  width: 100%; }
 
 /*# sourceMappingURL=grid.css.map */

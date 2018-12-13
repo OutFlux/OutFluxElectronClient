@@ -8,7 +8,7 @@ import ArtistListPage from "./Artists"
 import SongListPage from "./Songs"
 
 
-export default class Browser extends React.Component{
+export default class Browser extends React.PureComponent{
   constructor(props){
     super(props)
   }

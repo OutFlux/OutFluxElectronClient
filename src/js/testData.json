@@ -1,0 +1,40 @@
+{
+  "FeaturedAlbums": [
+    {
+      "AlbumName": "Motifs II",
+      "AlbumArtist": "20syl",
+      "AlbumArt":"https://img.discogs.com/BHgawdPHp6elU3rsUINfOl22diM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7013496-1431687363-7069.jpeg.jpg",
+      "tracks": []
+    },
+    {
+      "AlbumName": "Aa",
+      "AlbumArtist": "Baauer",
+      "AlbumArt":"https://i.scdn.co/image/3b9d2768526db0ad726ab5fefcdc684217f963ae",
+      "tracks": []
+    },
+    {
+      "AlbumName": "Is This Love (Remix)",
+      "AlbumArtist": "Bob Marley & The Wailers",
+      "AlbumArt":"https://i.scdn.co/image/896a024803880e1f6283dce66b646575aed43b66",
+      "tracks": []
+    },
+    {
+      "AlbumName": "24K Magic",
+      "AlbumArtist": "Bruno Mars",
+      "AlbumArt":"https://images-na.ssl-images-amazon.com/images/I/51gYvSDtu2L._SS500.jpg",
+      "tracks": []
+    },
+    {
+      "AlbumName": "My Way",
+      "AlbumArtist": "Calvin Harris",
+      "AlbumArt":"https://images-na.ssl-images-amazon.com/images/I/511CiHTKQtL._SS500.jpg",
+      "tracks": []
+    },
+    {
+      "AlbumName": "Slide (feat. Frank Ocean & Migos)",
+      "AlbumArtist": "Calvin Harris",
+      "AlbumArt": "https://www.globalprpool.com/assets/files/Calvin-Harris-ft-Frank-Ocean-Migos-Slide-Artwork-2.jpg",
+      "tracks": []
+    }
+  ]
+}
