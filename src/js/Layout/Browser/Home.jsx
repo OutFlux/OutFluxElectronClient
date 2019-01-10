@@ -2,6 +2,7 @@ import React from "react"
 import AlbumCard from "./Components/AlbumCard"
 import SlideShow from "./Components/SlideShow"
 import HorizontalList from "./Components/HorizontalList"
+import Heading from "./Components/Heading"
 let fs = require('fs');
 let testData = JSON.parse(fs.readFileSync('src/js/testData.json', 'utf8'));
 
@@ -27,8 +28,10 @@ export default class HomePage extends React.Component{
 
     return (
       <div className="webPage" id="Home">
-        <SlideShow/>
-        <HorizontalList>
+        <HorizontalList 
+          title="Featured"
+          cardSetSize={cardSet.length}
+        >
           {cardSet}
         </HorizontalList>
       </div>

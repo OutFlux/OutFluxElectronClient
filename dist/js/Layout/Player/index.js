@@ -34,12 +34,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-let mediakeys = require('mediakeys').listen();
+//let mediakeys = require('mediakeys').listen();
 
 // toggle playing state
 // media keys
 // mediakeys.on('play', () => {
 //     player.togglePlay()
+// })
+
+// mediakeys.on('next', () => {
+// })
+// mediakeys.on('back', () => {
+
 // })
 
 // space bar
@@ -49,9 +55,6 @@ document.body.onkeydown = event => {
     player.togglePlay();
   }
 };
-
-mediakeys.on('next', () => {});
-mediakeys.on('back', () => {});
 
 let music;
 let player = {

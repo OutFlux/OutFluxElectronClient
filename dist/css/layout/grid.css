@@ -1,7 +1,8 @@
 html, body {
   height: 100%;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  scroll-behavior: smooth; }
 
 .container {
   width: 100%;
@@ -109,7 +110,7 @@ div#root {
   height: 1.5em;
   padding-top: 1em; }
 
-.sideBarComponent span, .sideBarSectionBreak span {
+.sideBarComponent a, .sideBarSectionBreak a {
   height: 100%;
   width: 100%;
   display: inline-block; }
@@ -164,8 +165,7 @@ div#root {
 
 .albumCard {
   height: 15rem;
-  width: 12rem;
-  float: left; }
+  width: 12rem; }
   .albumCard .imgHolder {
     box-sizing: border-box;
     padding: 1rem;
@@ -181,7 +181,10 @@ div#root {
     padding: 0 1rem; }
     .albumCard .cardMeta span {
       width: 100%;
-      display: inline-block; }
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .albumCard .cardMeta .albumName {
       width: 100%;
       font-weight: 800;
@@ -193,12 +196,47 @@ div#root {
 
 .horizontalList {
   width: 100%;
-  height: 16rem;
+  height: 14rem;
   box-sizing: border-box;
-  padding: 1rem 2rem; }
+  padding: 0rem 2rem;
+  float: left; }
+  .horizontalList > div {
+    float: left; }
+  .horizontalList .leftArrow, .horizontalList .rightArrow {
+    width: 5%;
+    height: 100%; }
+    .horizontalList .leftArrow:hover, .horizontalList .rightArrow:hover {
+      background: rgba(0, 0, 0, 0.5); }
+    .horizontalList .leftArrow i, .horizontalList .rightArrow i {
+      position: relative;
+      top: 45%; }
+  .horizontalList .leftArrow i {
+    left: 50%; }
+  .horizontalList .rightArrow i {
+    left: 50%; }
+  .horizontalList .listObjects {
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: visible;
+    white-space: nowrap; }
+    .horizontalList .listObjects .albumCard {
+      display: inline-block; }
 
 .slideShow {
   height: 300px;
   width: 100%; }
+
+.browser h2 {
+  padding: 1rem 2rem 0; }
+  .browser h2 span {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0; }
+  .browser h2 .leftArrow, .browser h2 .rightArrow {
+    float: right;
+    padding: 0 0.25em;
+    font-size: 1.75em;
+    height: 100%; }
 
 /*# sourceMappingURL=grid.css.map */

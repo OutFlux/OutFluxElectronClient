@@ -14,7 +14,7 @@ export default class SideBarComponent extends React.Component{
           paddingTop: "0"
         }: {}}
       >
-        <span>{this.props.name}</span>
+        <a>{this.props.name}</a>
       </div>
     )
   }

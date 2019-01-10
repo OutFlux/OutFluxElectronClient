@@ -6,12 +6,18 @@ import SecondaryController from "./SecondaryController"
 import ProgressBar from "./ProgressBar"
 import * as b64Encoder from "base64-arraybuffer"
 import {Howl, Howler} from 'howler';
-let mediakeys = require('mediakeys').listen();
+//let mediakeys = require('mediakeys').listen();
 
 // toggle playing state
 // media keys
 // mediakeys.on('play', () => {
 //     player.togglePlay()
+// })
+
+// mediakeys.on('next', () => {
+// })
+// mediakeys.on('back', () => {
+
 // })
 
 // space bar
@@ -22,11 +28,7 @@ document.body.onkeydown = event => {
 }
 
 
-mediakeys.on('next', () => {
-})
-mediakeys.on('back', () => {
 
-})
 
 let music 
 let player = {

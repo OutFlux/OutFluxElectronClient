@@ -60,12 +60,12 @@ html, body {
 .sideBar {
   background-color: rgba(0, 0, 0, 0.3); }
 
-.sideBarComponent span, .sideBarSectionBreak span {
+.sideBarComponent a, .sideBarSectionBreak a {
   vertical-align: middle;
   padding: 0.75em 2em;
   box-sizing: border-box; }
 
-.sideBarSectionBreak span {
+.sideBarSectionBreak a {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 75%; }
@@ -74,5 +74,8 @@ html, body {
   border-left: 4px solid green; }
   .sideBarComponent.active span {
     color: #777; }
+
+.sideBar a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=UX.css.map */

@@ -1,6 +1,7 @@
 // layout
 import React from "react"
 import * as mm from 'music-metadata';
+import { HashRouter as Router } from "react-router-dom";
 
 import SideBar from "./SideBar"
 import Browser from "./Browser"
@@ -12,16 +13,13 @@ export default class Layout extends React.Component{
     this.state = {
       player: {
         trackMetaData: {
-          title: "None",
-          artist: "None",
+          title: "No Track Loaded",
+          artist: "Unknown",
           picture:{
             0: {}
           }
         },
         rawMeta:{}
-      },
-      browser: {
-        CurrentPage: "/Browse/Home"
       }
     }
   }
@@ -40,25 +38,15 @@ export default class Layout extends React.Component{
       .catch(e => console.error(e.message))
   }
 
-  loadPage(page){
-    this.setState( _ => ({
-      browser: {
-        CurrentPage: page
-      }
-    }))
-  }
-
   render(){
     return (
       <div className="container">
-        <div className="window">
-          <SideBar
-            LoadPage={this.loadPage.bind(this)}
-          />
-          <Browser
-            CurrentPage={this.state.browser.CurrentPage}
-          />
-        </div>
+        <Router initialEntries={["/"]}>
+          <div className="window">
+            <SideBar/>
+            <Browser/>
+          </div>
+        </Router>
         <Player 
           trackMetaData={this.state.player.trackMetaData}
           newTrack={this.newTrack.bind(this)}

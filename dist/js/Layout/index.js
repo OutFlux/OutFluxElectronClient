@@ -12,6 +12,8 @@ var _musicMetadata = require("music-metadata");
 
 var mm = _interopRequireWildcard(_musicMetadata);
 
+var _reactRouterDom = require("react-router-dom");
+
 var _SideBar = require("./SideBar");
 
 var _SideBar2 = _interopRequireDefault(_SideBar);
@@ -28,22 +30,20 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// layout
 class Layout extends _react2.default.Component {
   constructor() {
     super();
     this.state = {
       player: {
         trackMetaData: {
-          title: "None",
-          artist: "None",
+          title: "No Track Loaded",
+          artist: "Unknown",
           picture: {
             0: {}
           }
         },
         rawMeta: {}
-      },
-      browser: {
-        CurrentPage: "/Browse/Home"
       }
     };
   }
@@ -60,27 +60,19 @@ class Layout extends _react2.default.Component {
     }).catch(e => console.error(e.message));
   }
 
-  loadPage(page) {
-    this.setState(_ => ({
-      browser: {
-        CurrentPage: page
-      }
-    }));
-  }
-
   render() {
     return _react2.default.createElement(
       "div",
       { className: "container" },
       _react2.default.createElement(
-        "div",
-        { className: "window" },
-        _react2.default.createElement(_SideBar2.default, {
-          LoadPage: this.loadPage.bind(this)
-        }),
-        _react2.default.createElement(_Browser2.default, {
-          CurrentPage: this.state.browser.CurrentPage
-        })
+        _reactRouterDom.HashRouter,
+        { initialEntries: ["/"] },
+        _react2.default.createElement(
+          "div",
+          { className: "window" },
+          _react2.default.createElement(_SideBar2.default, null),
+          _react2.default.createElement(_Browser2.default, null)
+        )
       ),
       _react2.default.createElement(_Player2.default, {
         trackMetaData: this.state.player.trackMetaData,
@@ -91,7 +83,6 @@ class Layout extends _react2.default.Component {
   }
 }
 
-exports.default = Layout; // layout
-
+exports.default = Layout;
 module.exports = Layout;
 //# sourceMappingURL=index.js.map

@@ -3,6 +3,7 @@ html, body{
   height: 100%;
   width: 100%;
   margin: auto;
+  scroll-behavior: smooth;
 }
 
 .container{
@@ -134,7 +135,7 @@ div#root{
   padding-top: 1em;
 }
 
-.sideBarComponent span, .sideBarSectionBreak span{
+.sideBarComponent a, .sideBarSectionBreak a{
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -200,7 +201,6 @@ div#root{
 .albumCard{
   height: 15rem;
   width: 12rem;
-  float: left;
   & .imgHolder{
     box-sizing: border-box;
     padding: 1rem;
@@ -218,7 +218,10 @@ div#root{
     padding: 0 1rem;
     & span{
       width: 100%;
-      display: inline-block;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     & .albumName{
       width: 100%;
@@ -234,16 +237,67 @@ div#root{
 }
 
 .horizontalList{
+  // width: 100%;
   width: 100%;
-  height: 16rem;
+  height: 14rem;
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
+  float: left;
+  & > div{
+    float: left;
+  }
+  & .leftArrow, .rightArrow{
+    width: 5%;
+    height: 100%;
+    // top: 40%;
+    // position: relative;
+    &:hover{
+      background: rgba($color: #000000, $alpha: 0.5)
+    }
+    & i{
+      position: relative;
+      top:45%;
+    }
+  }
+  & .leftArrow i{
+    left: 50%;
+  }
+  & .rightArrow i{
+    left: 50%;
+  }
+  & .listObjects{
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: visible;
+    white-space: nowrap;
+    & .albumCard{
+      display: inline-block;
+    }
+  }
+  // & .rightArrow i{
+    
+  // }
 }
-
 
 .slideShow {
   height: 300px;
   width: 100%;
+}
+
+.browser h2{
+  padding: 1rem 2rem 0;
+  & span{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+  }
+  & .leftArrow, .rightArrow{
+    float: right;
+    padding:0 0.25em;
+    font-size: 1.75em;
+    height: 100%;
+  }
 }
 
 

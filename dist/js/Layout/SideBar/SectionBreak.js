@@ -26,7 +26,7 @@ class SideBarComponent extends _react2.default.Component {
         } : {}
       },
       _react2.default.createElement(
-        "span",
+        "a",
         null,
         this.props.name
       )

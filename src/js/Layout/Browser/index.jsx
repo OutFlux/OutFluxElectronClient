@@ -1,5 +1,6 @@
 // Browser
 import React from "react"
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 import HomePage from "./Home"
 import FeaturedPage from "./Featured"
@@ -8,7 +9,7 @@ import ArtistListPage from "./Artists"
 import SongListPage from "./Songs"
 
 
-export default class Browser extends React.PureComponent{
+export default class Browser extends React.Component{
   constructor(props){
     super(props)
   }
@@ -19,46 +20,16 @@ export default class Browser extends React.PureComponent{
     Console.error(error)
   }
 
-  dissasembleVirtualURL(_path){
-    // console.log(_path)
-    
-    let Path
-    if(!!_path){
-      Path = _path
-    } 
-    else {
-      console.log("URL ERROR: " + "invalid URL")
-      console.log(_path)
-    }
-  
-    let pageShortcuts = {
-      Browse:{
-        Home: <HomePage/>,
-        Featured: <FeaturedPage/>
-      },
-      MyMusic:{
-        Albums: <AlbumListPage/>,
-        Artists: <ArtistListPage/>,
-        Songs: <SongListPage/>
-      },
-      Create: {
-        Playlist: "Creating Playlist..."
-      }
-    }
-    
-    let pathArray = Path.split("/")
-    
-    let component = pageShortcuts[pathArray[1]][pathArray[2]]
-    
-    return component
-  }
-
   render(){
-    let currentPage = this.props.CurrentPage
-    let page = this.dissasembleVirtualURL(currentPage)
     return (
       <div className="browser">
-        {page}
+        <Route exact path="/" component={HomePage} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/featured" component={FeaturedPage} />
+        <Route path="/library/albums" component={AlbumListPage} />
+        <Route path="/library/artists" component={ArtistListPage} />
+        <Route path="/library/songs" component={SongListPage} />
+        <Route path="/playlist" component={null} />
       </div>
     )
   }

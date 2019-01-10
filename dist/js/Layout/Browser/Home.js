@@ -20,6 +20,10 @@ var _HorizontalList = require("./Components/HorizontalList");
 
 var _HorizontalList2 = _interopRequireDefault(_HorizontalList);
 
+var _Heading = require("./Components/Heading");
+
+var _Heading2 = _interopRequireDefault(_Heading);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 let fs = require('fs');
@@ -46,10 +50,12 @@ class HomePage extends _react2.default.Component {
     return _react2.default.createElement(
       "div",
       { className: "webPage", id: "Home" },
-      _react2.default.createElement(_SlideShow2.default, null),
       _react2.default.createElement(
         _HorizontalList2.default,
-        null,
+        {
+          title: "Featured",
+          cardSetSize: cardSet.length
+        },
         cardSet
       )
     );
